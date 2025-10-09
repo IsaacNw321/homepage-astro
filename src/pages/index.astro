@@ -1,7 +1,6 @@
 ---
 import About from '../components/About.astro';
 import Layout from '../layouts/Layout.astro';
-import LaserFlow from '@/components/LaserFlow';
 import Skills from '@/components/Skills'
 import Services from '@/components/Services'
 import Animation from '@/components/Animation.astro'
@@ -9,9 +8,9 @@ import Hero from '@/components/Hero.astro'
 ---
 
 <Layout title="My profile">
-	<Hero client:load/>
+	<Hero />
 	<Skills client:load />
 	<Services  client:load/>
-    <Animation client:load/>
-	<About client:load/>
+    <Animation />
+	<About />
 </Layout>

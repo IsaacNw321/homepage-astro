@@ -56,8 +56,6 @@ const Services = () =>{
         <h2 className="text-4xl font-bold text-center mb-12">Mis servicios</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => {
-            // --- 3. PROPER DYNAMIC COMPONENT RETRIEVAL ---
-            // This now correctly looks up the component using the string key.
             const IconComponent = iconMap[service.icon]
             return (
               <div key={index} className="flex justify-center">
@@ -65,7 +63,6 @@ const Services = () =>{
                   <div>
                     <h3 className="text-xl font-bold mb-2">{service.title}</h3>
                     <p className="text-gray-400 mb-4">{service.description}</p>
-                    {/* The IconComponent is rendered with props */}
                     {IconComponent && <IconComponent className="mx-auto my-4" color="#2563EB" size={48} />}
                   </div>
                   {service.link && (
