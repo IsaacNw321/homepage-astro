@@ -4,11 +4,11 @@ import Layout from '../layouts/Layout.astro';
 import Skills from '@/components/Skills'
 import Services from '@/components/Services'
 import Animation from '@/components/Animation.astro'
-import Hero from '@/components/Hero.astro'
+import Welcome from '@/components/Welcome.astro';
 ---
 
 <Layout title="My profile">
-	<Hero />
+	<Welcome />
 	<Skills client:load />
 	<Services  client:load/>
     <Animation />

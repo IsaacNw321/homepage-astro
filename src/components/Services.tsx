@@ -51,15 +51,15 @@ const services =[
 
 const Services = () =>{
   return(
-    <section className="w-full p-16 flex flex-col justify-center align-middle rounded-b-none rounded-xl bg-transparent md:bg-gray-900 lg:-mx-0 lg:bg-gray-900">
-      <div className="w-72 -mx-4 max-w-6xl px-4 sm:px-6 lg:w-full lg:px-8">
+    <section className="w-full p-16 flex flex-col justify-center align-middle rounded-b-none rounded-xl bg-transparent lg:-mx-0 ">
+      <div className="w-72 m-auto max-w-6xl px-4 sm:px-6 lg:w-full lg:px-8">
         <h2 className="text-4xl font-bold text-center mb-12">Mis servicios</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
           {services.map((service, index) => {
             const IconComponent = iconMap[service.icon]
             return (
               <div key={index} className="flex justify-center">
-                <div className="bg-gray-800 p-6 rounded-lg w-full max-w-sm text-center flex flex-col justify-between h-full lg:h-108">
+                <div className="bg-gray-800 p-6 rounded-lg w-full max-w-sm text-center flex flex-col justify-between lg:h-80">
                   <div>
                     <h3 className="text-xl font-bold mb-2">{service.title}</h3>
                     <p className="text-gray-400 mb-4">{service.description}</p>
