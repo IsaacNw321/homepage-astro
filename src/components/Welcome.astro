@@ -1,12 +1,10 @@
 ---
 import LogoDev from 'public/Logodev.png'
 const backgroundImageUrl = LogoDev.src;
-import {
-  FaArrowDown
-} from 'react-icons/fa';
+import ScrollButton from './ScrollButton';
 ---
 
- <section
+<section
   class="w-full h-full m-auto flex justify-center align-middle my-8 sm:-mx-0 lg:-mx-0 md:w-auto md:h-96 lg:w-full lg:h-[calc(100vh-112px)]
     bg-[#101922] relative 
   "
@@ -26,17 +24,21 @@ import {
     </aside>
   </div>
   <div class="w-72 mt-20 sm:mt-12 rounded-2xl gap-6 md:w-auto p-8 lg:w-4/5 relative z-10 flex flex-col items-center justify-center h-full text-center">
-    <h1 class="font-Inter flex justify-center items-center text-4xl sm:text-5xl md:text-6xl lg:text-6xl font-bold  h-48">
+    
+    <img 
+      class="max-w-32 max-h-32 rounded-full border-4 border-white mb-6" 
+      src={`${backgroundImageUrl}`} 
+      alt="Developer Logo"
+    >
+    
+    <h1 class="font-Inter text-4xl sm:text-5xl md:text-6xl lg:text-6xl font-bold">
       Welcome. I'm a Full-Stack Developer.
     </h1>
-    <p class="font-Inter  sm:xl">
+    
+    <p class="font-Inter sm:xl mt-4">
       Specializing in creating seamless user experiences and powerful backend automations with <span>N8N</span> and <span>Zapier</span>.
     </p>
-    <button
-      class="font-Inter cursor-pointer flex gap-3 flex-col mb-24 mt-20 md:mt-0 lg:mt-0 md:mb-0 lg:mb-0 bg-transparent font-bold py-2 px-4 rounded text-base sm:text-lg items-center justify-center group" 
-    >
-      Scroll Down
-      <FaArrowDown className="ml-2 opacity-0 transition-opacity duration-300 group-hover:opacity-100" /> 
-    </button>
+    
+    <ScrollButton client:load/>
   </div>
 </section>
