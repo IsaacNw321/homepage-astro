@@ -1,17 +1,16 @@
 ---
-import About from '../components/About.astro';
+import About from '../sections/About.astro';
 import Layout from '../layouts/Layout.astro';
-import LaserFlow from '@/components/LaserFlow';
-import Skills from '@/components/Skills'
-import Services from '@/components/Services'
-import Animation from '@/components/Animation.astro'
-import Hero from '@/components/Hero.astro'
+import Skills from '@/sections/Skills'
+import Services from '@/sections/Services'
+import Animation from '@/sections/Animation.astro'
+import Welcome from '@/sections/Welcome.astro';
 ---
 
-<Layout title="My profile">
-	<Hero client:load/>
+<Layout title="Mi Portafolio">
+	<Welcome />
 	<Skills client:load />
-	<Services  client:load/>
-    <Animation client:load/>
-	<About client:load/>
+	<Services />
+    <Animation />
+	<About />
 </Layout>

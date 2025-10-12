@@ -1,5 +1,5 @@
 import React from 'react';
-import LogoLoop, { type LogoItem } from './LogoLoop';
+import LogoLoop, { type LogoItem } from '../components/LogoLoop';
 import { 
   SiReact,
   SiAstro,
@@ -49,13 +49,13 @@ const tools: LogoItem[] = [
   { node: <IconPill label="PostgreSQL"><SiPostgresql size={22} color="#4169E1" /></IconPill>, title: 'PostgreSQL' },
   { node: <IconPill label="Git"><SiGit size={22} color="#F05032" /></IconPill>, title: 'Git' },
   { node: <IconPill label="GitHub"><SiGithub size={22} /></IconPill>, title: 'GitHub' },
-    { node: <IconPill label="N8N"><SiZapier size={22} /></IconPill>, title: 'N8N' },
-      { node: <IconPill label="Zapier"><SiN8N size={22} /></IconPill>, title: 'Zapier' },
+  { node: <IconPill label="Zapier"><SiZapier size={22} /></IconPill>, title: 'Zapier' },
+  { node: <IconPill label="N8N"><SiN8N size={22} /></IconPill>, title: 'N8N' },
 ];
 
 export default function Skills() {
   return (
-    <section style={{ width: '100%', display: 'grid', gap: 16 }}>
+    <section className='mt-0 lg:mt-28' style={{ width: '100%', display: 'grid', gap: 16 }}>
       <h3 style={{
         fontSize: 24,
         fontWeight: 800,
