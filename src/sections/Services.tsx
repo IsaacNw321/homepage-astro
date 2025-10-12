@@ -2,15 +2,14 @@ import React from 'react';
 import type { Service, IconMap } from '@/types';
 import ServiceCard from '../components/ServiceCard';
 import { MdHeadsetMic } from 'react-icons/md';
-import { AiOutlineLayout } from 'react-icons/ai';
+import { AiOutlineLayout, AiOutlineCode } from 'react-icons/ai';
 import { 
-  SiWebflow,
   SiN8N,
 } from 'react-icons/si';
 
 
 const iconMap: IconMap = {
-  'Web': SiWebflow, 
+  'Web': AiOutlineCode, 
   'N8N': SiN8N,      
   'Layout': AiOutlineLayout,       
   'Headphones': MdHeadsetMic,

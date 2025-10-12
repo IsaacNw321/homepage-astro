@@ -27,7 +27,7 @@ const ScrollButton: React.FC = () => {
         className="font-Inter cursor-pointer flex gap-3 flex-col mb-24 mt-20 md:mt-0 lg:mt-0 md:mb-0 lg:mb-0 bg-transparent font-bold py-2 px-4 rounded text-base sm:text-lg items-center justify-center group"
         onClick={handleScrollDown} 
       >
-        Scroll Down
+        Bajar
         <FaArrowDown 
         className="ml-2 transition-opacity duration-300 group-hover:opacity-100 animate-bounce-custom"/>
       </button>
