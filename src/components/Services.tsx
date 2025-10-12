@@ -1,34 +1,17 @@
 import React from 'react';
-import { TbWorld, TbLayout } from 'react-icons/tb';
+import type { Service, IconMap } from '@/types';
+import ServiceCard from './ServiceCard';
 import { MdHeadsetMic } from 'react-icons/md';
 import { AiOutlineLayout } from 'react-icons/ai';
 import { 
-  SiPagekit,
   SiWebflow,
   SiN8N,
-  SiZapier,
-  SiGlovo,
 } from 'react-icons/si';
 
-interface Service {
-  title: string;
-  description: string;
-  icon: string; 
-  link?: string; 
-  button?: string; 
-}
-
-interface IconMap {
-  [key: string]: React.ElementType;
-}
 
 const iconMap: IconMap = {
   'Web': SiWebflow, 
-  'Zapier': SiZapier,
-  'N8N': SiN8N,
-  'Glovo': SiGlovo,
-  'PageKit': SiPagekit,
-  'Globe': TbWorld,           
+  'N8N': SiN8N,      
   'Layout': AiOutlineLayout,       
   'Headphones': MdHeadsetMic,
 };
@@ -71,40 +54,9 @@ const Services: React.FC = () => {
         <h2 className="text-4xl font-bold text-center mb-12">Mis servicios</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
           {services.map((service, index) => { 
-            const IconComponent = iconMap[service.icon];
-            
-            return (
-              <div key={index} className="flex justify-center">
-                <div className="relative group w-full max-w-sm">
-                  <div 
-                    className="absolute inset-0 z-0 bg-blue-600/50 rounded-lg animate-spin-glow" 
-                    style={{ 
-                      width: '100%', 
-                      height: '100%',
-                    }}
-                  ></div>
-                  <div className="bg-gray-800 p-6 rounded-lg w-full max-w-sm text-center flex flex-col justify-between lg:h-80 relative z-10">
-                    <div>
-                      <h3 className="text-xl font-bold mb-2">{service.title}</h3>
-                      <p className="text-gray-400 mb-4">{service.description}</p>
-                      {IconComponent && <IconComponent className="mx-auto my-4" color="#2563EB" size={48} />}
-                    </div>
-                    {service.link && (
-                      <div className="mt-4">
-                        <a
-                          href={service.link}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded transition duration-300 ease-in-out"
-                        >
-                          {service.button}
-                        </a>
-                      </div>
-                    )}
-                  </div>
-                </div>
-              </div>
-            );
+            return(
+              <ServiceCard key={index} service={service} iconMap={iconMap} />
+            )
           })}
         </div>
       </div>
