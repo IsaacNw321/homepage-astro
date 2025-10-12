@@ -1,6 +1,6 @@
 import React from 'react';
 import type { Service, IconMap } from '@/types';
-import ServiceCard from './ServiceCard';
+import ServiceCard from '../components/ServiceCard';
 import { MdHeadsetMic } from 'react-icons/md';
 import { AiOutlineLayout } from 'react-icons/ai';
 import { 

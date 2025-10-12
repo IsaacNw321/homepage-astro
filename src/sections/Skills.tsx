@@ -1,5 +1,5 @@
 import React from 'react';
-import LogoLoop, { type LogoItem } from './LogoLoop';
+import LogoLoop, { type LogoItem } from '../components/LogoLoop';
 import { 
   SiReact,
   SiAstro,
