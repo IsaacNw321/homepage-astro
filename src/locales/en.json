@@ -1,0 +1,61 @@
+
+
+{
+  "about": {
+    "title": "About Me",
+    "paragraphs": [
+      "I'm a full-stack developer who uses technology and AI not only to build, but to automate, solve, and accelerate the journey from customer needs to the final product.",
+      "My skills are strong in front-end, back-end, and relational database management."
+    ]
+  },
+  "Welcome": {
+    "title": "Full Stack Developer",
+    "description": "Specializing in creating seamless user experiences and powerful automations.",
+    "button": "Scroll down"
+  },
+  "skills" : {
+    "title" : "My tools"
+  },
+ "services": {
+  "title": "My Services",
+  "items": [
+     {
+"title": "Static Websites",
+"description": "Fast, responsive, and SEO-optimized static websites built with modern technologies.",
+"icon": "Web",
+"button": "See More",
+"link": "https://angels-app.vercel.app/"
+},
+  {
+"title": "Web Applications",
+"description": "Full-stack web applications with robust backend integration and user authentication.",
+"icon": "Layout",
+"button": "See More",
+"link": "https://front-end-chat-nine.vercel.app/"
+},
+  {
+"title": "Customer Support Agent",
+"description": "Proficient in bilingual communication, providing exceptional customer service with tools like Zendesk.",
+"icon": "Headphones",
+"button": "My CV",
+"link": "https://rxresu.me/isaac.pereira.50159/customer-support"
+},
+ {
+"title": "I transform your workflow by integrating AI-powered solutions",
+"description": "We integrate AI tools like Zapier or n8n directly into your existing or custom-built software.",
+"icon": "N8N",
+"button": "See More",
+"link": "https://angels-app.vercel.app/"
+}
+  ]
+},
+  "contact": {
+    "title": "Get In Touch",
+    "information": {
+      "title": "Contact Information",
+      "email": "i3170245@gmail.com",
+      "github": "GitHub Profile",
+      "linkedin": "LinkedIn Profile"
+    }
+  }
+}

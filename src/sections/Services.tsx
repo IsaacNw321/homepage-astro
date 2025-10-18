@@ -6,7 +6,7 @@ import { AiOutlineLayout, AiOutlineCode } from 'react-icons/ai';
 import { 
   SiN8N,
 } from 'react-icons/si';
-
+import { useT } from '@/context/LanguageContext';
 
 const iconMap: IconMap = {
   'Web': AiOutlineCode, 
@@ -47,12 +47,14 @@ const services: Service[] = [
 ];
 
 const Services: React.FC = () => {
+  const { t } = useT()
+  const servicest = t.services.items
   return (
     <section className="w-full p-16 flex flex-col justify-center align-middle rounded-b-none rounded-xl bg-transparent lg:-mx-0 ">
       <div className="w-72 m-auto max-w-6xl px-4 sm:px-6 lg:w-full lg:px-8">
-        <h2 className="text-4xl font-bold text-center mb-12">Mis servicios</h2>
+        <h2 className="text-4xl font-bold text-center mb-12">{t.services.title}</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
-          {services.map((service, index) => { 
+          {servicest.map((service, index) => { 
             return(
               <ServiceCard key={index} service={service} iconMap={iconMap} />
             )

@@ -1,0 +1,59 @@
+{
+  "about": {
+    "title": "Sobre Mí",
+    "paragraphs": [
+      "Soy un Full-Stack que usa la tecnología y la IA no solo para construir, sino para automatizar, resolver y acelerar el camino desde las necesidades del cliente hasta el producto final",
+      "Mis habilidades son sólidas en Front-End, Back-End y gestión de bases de datos relacionales."
+    ]
+  },
+  "Welcome": {
+    "title": "Desarrollador Full-Stack.",
+    "description": "Especializado en la creación de experiencias de usuario fluidas y potentes automatizaciones",
+    "button": "Ver Más"
+  },
+  "skills" : {
+    "title" : "Herramientas"
+  },
+  "services": {
+    "title": "Mis Servicios",
+    "items": [
+      {
+    "title": "Sitios Web Estáticos",
+    "description": "Sitios web estáticos rápidos, responsivos y optimizados para SEO construidos con tecnologías modernas.",
+    "icon": "Web", 
+    "button": "Ver Más",
+    "link": "https://angels-app.vercel.app/"
+  },
+  {
+    "title": "Aplicaciones Web",
+    "description": "Aplicaciones web full-stack con integración robusta de backend y autenticación de usuarios.",
+    "icon": "Layout",
+    "button": "Ver Más",
+    "link": "https://front-end-chat-nine.vercel.app/"
+  },
+  {
+    "title": "Agente de Soporte al Cliente",
+    "description": "Competente en comunicación bilingüe, proporcionando un servicio al cliente excepcional con herramientas como Zendesk.",
+    "icon": "Headphones",
+    "button": "Ver CV",
+    "link": "https://rxresu.me/isaac.pereira.50159/atencion-al-cliente"
+  },
+  {
+    "title": "Transformo tu flujo de trabajo integrando soluciones con AI",
+    "description": "Integramos herramientas de AI como Zapier o n8n directamente en su software existente o creado personalizadamente.",
+    "icon": "N8N", 
+    "button": "Ver Más",
+    "link": "https://angels-app.vercel.app/"
+  }
+    ]
+  },
+  "contact": {
+    "title": "Ponte en Contacto",
+    "information": {
+      "title": "Información de Contacto",
+      "email": "i3170245@gmail.com",
+      "github": "Perfil de GitHub",
+      "linkedin": "Perfil de LinkedIn"
+    }
+  }
+}

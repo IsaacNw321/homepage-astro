@@ -1,16 +1,19 @@
 ---
-import About from '../sections/About.astro';
+import About from '../sections/About.tsx';
 import Layout from '../layouts/Layout.astro';
 import Skills from '@/sections/Skills'
 import Services from '@/sections/Services'
 import Animation from '@/sections/Animation.astro'
-import Welcome from '@/sections/Welcome.astro';
+import Welcome from '@/sections/Welcome.tsx';
+import {LanguageProvider} from "../context/LanguageContext" 
 ---
 
 <Layout title="Mi Portafolio">
-	<Welcome />
-	<Skills client:load />
-	<Services />
-    <Animation />
-	<About />
+	<LanguageProvider client:only="react"  >
+	<Welcome client:only="astro" />
+	<Skills client:only="react" />
+    <Services client:only="react"/>
+	<Animation />
+	<About client:only="react" />
+	</LanguageProvider>
 </Layout>
