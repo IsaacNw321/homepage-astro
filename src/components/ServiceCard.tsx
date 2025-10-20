@@ -25,6 +25,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ service, iconMap }) => {
                   href={service.link}
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-disabled={service.link === null ? "true" : "false"}
                   className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded transition duration-300 ease-in-out"
                 >
               {service.button}

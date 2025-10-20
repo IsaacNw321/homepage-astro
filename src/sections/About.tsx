@@ -19,7 +19,7 @@ const About = () =>{
   <ProfileCard
       name="Isaac Pereira"
       title="Full-Stack"
-      handle="NewtonDev"
+      handle="IsaacDev"
       avatarUrl={devImage}
       enableTilt={true}
       enableMobileTilt={false}
