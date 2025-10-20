@@ -1,26 +1,21 @@
 ---
 import "../styles/global.css"
- const {title} = Astro.props
- import { LanguageProvider } from "@/context/LanguageContext"
+const {title} = Astro.props
 ---
 <!doctype html>
 <html lang="es">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		 <link rel="icon" type="image/x-icon" href="/public/LogoDev.ico" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-		
-	</head>
-	<body>
-	<LanguageProvider client:load>
-		  <slot />
-	</LanguageProvider>
-	</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width" />   
+   <link rel="icon" type="image/png" href="/src/LogoDev.png" />
+        <meta name="generator" content={Astro.generator} />
+        <title>{title}</title>
+    </head>
+    <body>
+        <slot />
+    </body>
 </html>
-
-<style>
+<style is:global>
 	html,
 	body {
 		margin: 0;
@@ -32,4 +27,11 @@ import "../styles/global.css"
 	button:hover {
 	  cursor: pointer;
 	}
+  @font-face {
+    font-family: 'Inter Italic', 'sans-serif';
+    font-style: italic;
+    font-weight: 100 900;
+    src: url('../assets/fonts/Inter-VariableFont_opsz,wght.ttf') format('truetype'); 
+    font-display: swap;
+  }
 </style>
