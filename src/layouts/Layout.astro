@@ -1,18 +1,22 @@
 ---
 import "../styles/global.css"
  const {title} = Astro.props
+ import { LanguageProvider } from "@/context/LanguageContext"
 ---
 <!doctype html>
-<html lang="en">
+<html lang="es">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
 		 <link rel="icon" type="image/x-icon" href="/public/LogoDev.ico" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
+		
 	</head>
 	<body>
-		<slot />
+	<LanguageProvider client:load>
+		  <slot />
+	</LanguageProvider>
 	</body>
 </html>
 

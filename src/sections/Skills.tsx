@@ -38,6 +38,8 @@ function IconPill({ children, label }: { children: React.ReactNode; label: strin
   );
 }
 
+import { useT } from '@/context/LanguageContext';
+
 const tools: LogoItem[] = [
   { node: <IconPill label="React"><SiReact size={22} color="#61DAFB" /></IconPill>, title: 'React' },
   { node: <IconPill label="Astro"><SiAstro size={22} color="#FF5D01" /></IconPill>, title: 'Astro' },
@@ -54,6 +56,15 @@ const tools: LogoItem[] = [
 ];
 
 export default function Skills() {
+  const {t, switchLanguage} = useT()
+  const handleClick = (l : 'es'| 'en') =>{
+    if(l === 'es'){
+      switchLanguage('es')
+    }
+     if(l === 'en'){
+      switchLanguage('en')
+    }
+  }
   return (
     <section className='mt-0 lg:mt-28' style={{ width: '100%', display: 'grid', gap: 16 }}>
       <h3 style={{
@@ -62,7 +73,7 @@ export default function Skills() {
         color: '#374151',
         textAlign: 'center'
       }}>
-        Herramientas que manejo
+        {t.skills.title}
       </h3>
       <LogoLoop 
         logos={tools}
