@@ -2,7 +2,7 @@
 
 {
   "about": {
-    "title": "About Me",
+    "title": "IsaacDev",
     "paragraphs": [
       "I'm a full-stack developer who uses technology and AI not only to build, but to automate, solve, and accelerate the journey from customer needs to the final product.",
       "My skills are strong in front-end, back-end, and relational database management."
@@ -38,14 +38,14 @@
 "description": "Proficient in bilingual communication, providing exceptional customer service with tools like Zendesk.",
 "icon": "Headphones",
 "button": "My CV",
-"link": "https://rxresu.me/isaac.pereira.50159/customer-support"
+"link": "https://rxresu.me/isaac.pereira.50159/customer-service"
 },
  {
 "title": "I transform your workflow by integrating AI-powered solutions",
 "description": "We integrate AI tools like Zapier or n8n directly into your existing or custom-built software.",
 "icon": "N8N",
-"button": "See More",
-"link": "https://angels-app.vercel.app/"
+"button": "",
+"link": null
 }
   ]
 },

@@ -3,7 +3,7 @@ import { FaArrowDown } from 'react-icons/fa';
 
 const MOBILE_BREAKPOINT = 768; 
 const DESKTOP_SCROLL_HEIGHT = 580; 
-const MOBILE_SCROLL_HEIGHT = 800;
+const MOBILE_SCROLL_HEIGHT = 710;
 
 const ScrollButton: React.FC = ()  => {
   const handleScrollDown = (): void => {

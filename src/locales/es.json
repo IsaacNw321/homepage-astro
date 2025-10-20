@@ -1,6 +1,6 @@
 {
   "about": {
-    "title": "Sobre Mí",
+    "title": "IsaacDev",
     "paragraphs": [
       "Soy un Full-Stack que usa la tecnología y la IA no solo para construir, sino para automatizar, resolver y acelerar el camino desde las necesidades del cliente hasta el producto final",
       "Mis habilidades son sólidas en Front-End, Back-End y gestión de bases de datos relacionales."
@@ -42,8 +42,8 @@
     "title": "Transformo tu flujo de trabajo integrando soluciones con AI",
     "description": "Integramos herramientas de AI como Zapier o n8n directamente en su software existente o creado personalizadamente.",
     "icon": "N8N", 
-    "button": "Ver Más",
-    "link": "https://angels-app.vercel.app/"
+    "button": "",
+    "link": null
   }
     ]
   },
