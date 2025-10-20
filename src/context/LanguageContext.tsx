@@ -5,11 +5,11 @@ import es from '../locales/es.json';
 import type { Translations, LanguageContextType } from '../types/';
 
 
-const defaultTranslations: Translations = en as Translations; 
+const defaultTranslations: Translations = es as Translations;
 const defaultContextValue: LanguageContextType = {
-  language: 'en',
+  text: 'es',
   t: defaultTranslations,
-  switchLanguage: () => {},
+  switchLanguage: () => { },
 };
 
 const LanguageContext = createContext<LanguageContextType>(defaultContextValue);
@@ -19,33 +19,33 @@ export function useT(): LanguageContextType {
 }
 
 export const LanguageProvider = ({ children }: { children: ReactNode }) => {
-  const [language, setLanguage] = useState<'es' | 'en'>('en');
-  const [translations, setTranslations] = useState<Translations>(es as Translations);
+    const [text, setText] = useState<'es' | 'en'>('es');
+    const [translations, setTranslations] = useState<Translations>(es as Translations);
 
-useEffect(() => {
-    if (typeof window !== 'undefined') {
+    useEffect(() => {
         const userLanguage = window.navigator.language;
         const initialLang = userLanguage.startsWith('es') ? 'es' : 'en';
-        setLanguage(initialLang);
+        
+        setText(initialLang);
         setTranslations(initialLang === 'es' ? (es as Translations) : (en as Translations));
-    }
-  }, []);
+    }, []);
 
- const switchLanguage = useCallback((lang: 'es' | 'en') => {
-    setLanguage(lang);
-    setTranslations(lang === 'es' ? (es as Translations) : (en as Translations));
-    console.log('Language Switched to:', lang);
-  }, []);
-  
- const contextValue = useMemo(() => ({
-    language,
-    t: translations, 
-    switchLanguage,
-  }), [language, translations, switchLanguage]);
 
-  return (
-    <LanguageContext.Provider value={contextValue}>
-      {children}
-    </LanguageContext.Provider>
-  );
+    const switchLanguage = useCallback((lang: 'es' | 'en') => {
+        if (text === lang) return; 
+        setText(lang);
+        setTranslations(lang === 'es' ? (es as Translations) : (en as Translations));
+    }, [text]); 
+
+    const contextValue = useMemo(() => ({
+        text,
+        t: translations,
+        switchLanguage,
+    }), [text, translations, switchLanguage]);
+
+    return (
+        <LanguageContext.Provider value={contextValue}>
+            {children}
+        </LanguageContext.Provider>
+    );
 };

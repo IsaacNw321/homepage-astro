@@ -1,7 +1,6 @@
 ---
 import "../styles/global.css"
  const {title} = Astro.props
- import LanguageButtons from "@/components/LanguageButton"
  import { LanguageProvider } from "@/context/LanguageContext"
 ---
 <!doctype html>
@@ -14,9 +13,11 @@ import "../styles/global.css"
 		<title>{title}</title>
 		
 	</head>
-	  <body>
-		<slot />
-	  </body>
+	<body>
+	<LanguageProvider client:load>
+		  <slot />
+	</LanguageProvider>
+	</body>
 </html>
 
 <style>

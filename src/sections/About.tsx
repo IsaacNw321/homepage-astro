@@ -6,16 +6,24 @@ import {
 } from "react-icons/si";
 import { useT } from "@/context/LanguageContext";
 import SplitText from "../components/SplitText";
-const githubText = "IsaacNw321";
-const linkedinText = "Isaac Pereira";
-const emailText = "i3170245@gmail.com";
+import ProfileCard from "@/components/ProfileCard";
+import Dev from '../../public/Me.png'
+const devImage = Dev.src;
 
 const About = () =>{
   const {t} = useT()
   
   return(
 
-<section className="m-auto flex-row min-h-screen flex justify-center items-center py-16 px-4">
+<section className="m-auto flex-col min-h-screen flex justify-center items-center py-16 px-4">
+  <ProfileCard
+      name="Isaac Pereira"
+      title="Full-Stack"
+      handle="NewtonDev"
+      avatarUrl={devImage}
+      enableTilt={true}
+      enableMobileTilt={false}
+    />
   <div className="w-full max-w-4xl shadow-xl rounded-2xl p-8 md:p-12 space-y-8">
     <h2 className="text-5xl lg:text-6xl font-extrabold text-center border-b-4 border-indigo-200 pb-4">
       <SplitText

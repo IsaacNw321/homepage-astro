@@ -1,19 +1,8 @@
 ---
-import About from '../sections/About.tsx';
 import Layout from '../layouts/Layout.astro';
-import Skills from '@/sections/Skills'
-import Services from '@/sections/Services'
-import Animation from '@/sections/Animation.astro'
-import Welcome from '@/sections/Welcome.tsx';
-import {LanguageProvider} from "../context/LanguageContext" 
+import Apppwrapper from "../Appwrapper"
 ---
 
 <Layout title="Mi Portafolio">
-	<LanguageProvider client:only="react"  >
-	<Welcome client:only="astro" />
-	<Skills client:only="react" />
-    <Services client:only="react"/>
-	<Animation />
-	<About client:only="react" />
-	</LanguageProvider>
+  <Apppwrapper client:load/>
 </Layout>

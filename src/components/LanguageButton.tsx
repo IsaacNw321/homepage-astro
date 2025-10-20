@@ -1,16 +1,19 @@
 import { useT } from "@/context/LanguageContext";
-
+import { useEffect } from "react";
 const LanguageButtons = () =>{
-    const {switchLanguage, language} = useT()
+    const {switchLanguage, text} = useT()
     const handleClick = (l : 'es' |'en') =>{
-      if(l ==='es'){
-        switchLanguage('es')
-      }
-      if(l ==='en'){
-        switchLanguage('en')
-      }
-      return console.log(l , language)
+        if(l ==='es'){
+            switchLanguage('es')
+        }
+        if(l ==='en'){
+            switchLanguage('en')
+        }
+        return console.log(l , text)
     }
+    useEffect(() => {
+console.log('LanguageButtons component observed a text change to:', text);
+}, [text]);
   return(
     <>
         <button onClick={() => handleClick('en')}
